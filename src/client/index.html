@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RxJS Counter </title>
+</head>
+
+<body>
+    <demo-app>Loading...</demo-app>
+
+    <script src="../../../node_modules/systemjs/dist/system.js"></script>
+    <script src="../../../node_modules/typescript/lib/typescript.js"></script>
+    <script src="../../../node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="../../../node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="../../../node_modules/angular2/bundles/angular2.js"></script>
+    <script src="../../../node_modules/angular2/bundles/http.js"></script>
+
+    <script>
+        System.config({
+            //use typescript for compilation
+            transpiler: 'typescript',
+            //typescript compiler options
+            typescriptOptions: { emitDecoratorMetadata: true },
+            //map tells the System loader where to look for things
+            //map: {
+            //    app: "./"
+            //},
+            //packages defines our app package
+            // packages: { 
+            //     app : {
+            //         main : './boot.ts'
+            //         defaultExtension: 'ts'
+            //     }
+            // }
+            
+            packages: { 
+                'src': { 
+                    defaultExtension: 'ts' 
+                } 
+            }
+        });
+        
+        System.import('boot.ts').catch(console.log.bind(console));
+    </script>
+</body>
+</html>
