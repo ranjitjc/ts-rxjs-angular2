@@ -26,6 +26,12 @@ build/Release
 # Dependency directory
 node_modules
 
+# Exclude typings
+typings
+
+*.js
+*.js.map
+
 # Optional npm cache directory
 .npm
 

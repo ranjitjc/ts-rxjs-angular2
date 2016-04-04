@@ -1,0 +1,24 @@
+<nav class='navbar navbar-default'>
+    <div class='container-fluid'>
+        <a class='navbar-brand'>{{pageTitle}}</a>
+        <ul class='nav navbar-nav'>
+            <li><a [routerLink]="['Welcome']">KnowledgeBase</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Features <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a [routerLink]="['Products']">Product List</a></li>
+                    <li><a href="#/valgroup">Validation Group</a></li>
+                    <li><a href="#/weather">Pipe</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">One more separated link</a></li>
+                </ul>
+            </li>
+            <li></li>
+        </ul>
+    </div>
+</nav>
+<div class='container'>
+    <router-outlet></router-outlet>
+</div>
