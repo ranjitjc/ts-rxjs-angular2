@@ -6,7 +6,7 @@ import {HelpCardDirective} from '../../directives/help-card.directive'
 @Component({
     selector: 'note-component',
     template: `
-    <div id='note' class="navbar navbar-default navbar-fixed-bottom">
+    <div id='note' class="navbar navbar-default navbar-fixed-bottom" style="height:50px">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

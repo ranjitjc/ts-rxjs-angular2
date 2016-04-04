@@ -1,5 +1,6 @@
 import { Component, OnInit }  from 'angular2/core';
 import { ROUTER_DIRECTIVES } from 'angular2/router';
+import {NotesComponent} from '../notes/notes';
 
 // import { IProduct } from './product';
 // import { ProductFilterPipe } from './product-filter.pipe';
@@ -12,6 +13,7 @@ import { ROUTER_DIRECTIVES } from 'angular2/router';
     // styleUrls: ['app/components/products/product-list.component.css']
     // pipes: [ProductFilterPipe],
     // directives: [StarComponent, ROUTER_DIRECTIVES]
+    ,directives:[NotesComponent]
 })
 export class ProductListComponent implements OnInit {
     pageTitle: string = 'Product List';
@@ -21,6 +23,8 @@ export class ProductListComponent implements OnInit {
     listFilter: string = "";
     errorMessage: string;
     products: any[]; // IProduct[];
+    helpHeaderText :string;
+    helpDetailHtml : string;
     
     constructor(){
        this.products= [{
@@ -84,6 +88,20 @@ export class ProductListComponent implements OnInit {
     }
     
     ngOnInit(): void {
+        this.helpHeaderText = "Help : Product list Component";
+        this.helpDetailHtml = `
+            <div class="row col-md-12">
+                <h4>Technologies:</h4>
+                <ul style="margin-left:20px">
+                    <li>Custom Directives</li>
+                    <li>Provider</li>
+                    <li>Child component data dining</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            `;
     //        this._productService.getProducts()
     //                  .subscribe(
     //                    products => this.products = products,

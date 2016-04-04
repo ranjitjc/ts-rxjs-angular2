@@ -11,6 +11,7 @@ import {WeatherComponent} from '../components/weather/weather.component'
    template: `
         <app-navbar></app-navbar>
      `,
+   styleUrls:['app/container/app.component.css'],
    directives:[ROUTER_DIRECTIVES,
             NavbarComponent,
             WelcomeComponent,
