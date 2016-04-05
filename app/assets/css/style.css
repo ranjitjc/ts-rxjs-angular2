@@ -8,3 +8,13 @@
   line-height: 1.42;
   border-radius: 15px;
 }
+
+
+.kalamText {
+    display: block;
+    padding-left: 1.3em;
+    border-left: 5px solid #dfdfdf;
+    font-size: 1.1em;
+    font-family: 'Kalam', cursive;
+    margin: 22px 0;
+}
