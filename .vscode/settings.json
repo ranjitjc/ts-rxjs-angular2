@@ -5,6 +5,5 @@
         "**/.DS_Store": true,
         "**/*.js": true,
         "**/*.map": true
-    }, 
-    "files.autoSave": "afterDelay"
+    }
 }

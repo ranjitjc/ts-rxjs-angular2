@@ -1,0 +1,49 @@
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Observerable
+    </div>
+    <div class="panel-body" >
+        <div class="row" style="margin:5px"  >
+            
+            <span class="kalamText">
+                In an Observable Execution, zero to infinite Next notifications may be delivered. If either an Error or Complete notification is delivered, then nothing else can be delivered afterwards.
+                <br/>
+                When you subscribe, you get back a Subscription, which represents the ongoing execution. Just call <code>unsubscribe()</code> to cancel the execution.
+            </span>
+            <div>
+                <button type="button" id="btnObserveStart" (click)="observableStart()">Start</button>
+                <button type="button" id="btnObserveStop" (click)="observableStop()">Stop</button>
+            </div>
+            <div [innerHTML]="observerHtml" ></div>
+        
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        buffer
+    </div>
+    <div class="panel-body" >
+        <div class="row" style="margin:5px"  >
+            <div>
+                <button type="button" id="btnBufferStart" (click)="bufferStart()">Start</button>
+                <button type="button" id="btnBufferStop" (click)="bufferStop()">Stop</button>
+            </div>
+            <div [innerHTML]="bufferHtml" ></div>
+        
+        </div>
+    </div>
+</div>
+
+<div>
+    <h3></h3>
+    <div [innerHTML]="outputHtml" ></div>
+    
+    <div>{{result}}</div>
+    
+    <div>
+        
+    </div>
+</div>    
