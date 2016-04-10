@@ -17,12 +17,14 @@ import 'rxjs/add/operator/switchMap';
 import { AppComponent } from './container/app.component';
 import {WikipediaService} from './services/wikipedia/wikipedia-service'
 import {CatalogService} from './services/catalog/catalog-service'
+import {ChatService} from './services/chat/chat-service'
 
 bootstrap(AppComponent,
     [
         ROUTER_PROVIDERS,
         WikipediaService, 
         CatalogService,
+        ChatService,
         JSONP_PROVIDERS,
         HTTP_PROVIDERS,
         provide(LocationStrategy, {useClass:HashLocationStrategy})

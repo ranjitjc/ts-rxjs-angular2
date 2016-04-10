@@ -8,6 +8,10 @@ import {WeatherComponent} from '../components/weather/weather.component'
 import {FunctionalComponent} from '../components/learnRx/functional.component'
 import {LearnRxComponent} from '../components/learnRx/learnRx.component'
 import {WikipediaComponent} from '../components/wikipedia/wikipedia-search.component'
+import {ChatComponentApp} from '../components/chat/chat.app'
+import {TimerComponent} from '../components/timer/timer.component'
+import {ValidationComponent} from '../components/validation/validation.component'
+import {CatalogComponent} from '../components/catalog/catalog.component'
 
 @Component({
    selector: 'kb-app',
@@ -22,7 +26,11 @@ import {WikipediaComponent} from '../components/wikipedia/wikipedia-search.compo
             WeatherComponent,
             FunctionalComponent,
             LearnRxComponent,
-            WikipediaComponent
+            WikipediaComponent,
+            ChatComponentApp,
+            TimerComponent,
+            ValidationComponent,
+            CatalogComponent
             ]       
 })
 
@@ -32,7 +40,11 @@ import {WikipediaComponent} from '../components/wikipedia/wikipedia-search.compo
                 { path: '/weather', name: 'Weather', component: WeatherComponent },
                 { path: '/funcational', name: 'Functional', component:FunctionalComponent},
                 { path: '/learnRx', name: 'LearnRx', component:LearnRxComponent},
-                { path: '/wikipedia', name: 'Wikipedia', component:WikipediaComponent}
+                { path: '/wikipedia', name: 'Wikipedia', component:WikipediaComponent},
+                { path: '/chat', name: 'Chat', component:ChatComponentApp},
+                { path: '/timer', name: 'Timer', component:TimerComponent},
+                { path: '/validation', name: 'Validation', component:ValidationComponent},
+                { path: '/catalog', name: 'Catalog', component:CatalogComponent}
             ])
 
 export class AppComponent{

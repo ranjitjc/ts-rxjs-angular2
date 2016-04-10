@@ -12,6 +12,10 @@ export class CatalogService {
     return this.http.get('/app/services/dat/food.json').map((res:Response) => res.json());
   }
 
+  getAuthors() {
+    return this.http.get('/app/services/data/authors.json').map((res:Response) => res.json());
+  }
+
   // Uses Observable.forkJoin() to run multiple concurrent http.get() requests.
   // The entire operation will result in an error state if any single request fails.
   getBooksAndMovies() {

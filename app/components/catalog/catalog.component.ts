@@ -23,6 +23,12 @@ import {CatalogService} from '../../services/catalog/catalog-service'
         <li *ngFor="#movie of movies">{{movie.title}}</li>
     </ul>
   </div>
+  <div class="panel">
+    <h2>Hello from the {{componentName}}!</h2>
+    <div *ngFor="#f of authors" class="alert alert-info">
+    <h4> Name : {{f.name}} </h4> <h4>Age: {{f.age}}</h4> 
+    </div>
+  </div>
   `
 })
 export class CatalogComponent {
@@ -30,6 +36,7 @@ export class CatalogComponent {
   public foods;
   public books;
   public movies;
+  public authors;
   errorMessage:string;
   
   constructor(private _demoService: CatalogService) { }
@@ -37,6 +44,8 @@ export class CatalogComponent {
   ngOnInit() {
     this.getFoods();
     this.getBooksAndMovies();
+    this.getAuthors();
+    
   }
 
   getFoods() {
@@ -60,4 +69,17 @@ export class CatalogComponent {
       // you will get console errors if the Observable is in an error state.
     );
   }
+  
+  getAuthors() {
+    this._demoService.getAuthors().subscribe(
+      // the first argument is a function which runs on success
+      data => { this.authors = data},
+      // the second argument is a function which runs on error
+      err => {this.errorMessage = err._body; console.error(err);},
+      // the third argument is a function which runs on completion
+      () => console.log('done loading authors')
+    );
+  }
+  
+  
 }
