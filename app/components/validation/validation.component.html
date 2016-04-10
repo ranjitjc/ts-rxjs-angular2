@@ -1,0 +1,73 @@
+<div>
+      <h2><b>My form</b></h2>
+      <form [ngFormModel]="myForm">
+        <div ngControlGroup="headerGroup">
+          <label>
+            Accept:
+          </label>
+          <input type="checkbox"
+            ngControl="acceptControl">
+            <br>
+          <label>
+            Year:
+          </label>
+          <input type="number"
+            ngControl="yearControl">
+          <br>
+          <label>
+            Name:
+          </label>
+          <input type="text"
+            ngControl="nameControl">
+          <br>
+        </div>
+        <div ngControlGroup="bodyGroup">
+          <label>
+            Title:
+          </label>
+          <input type="text"
+            ngControl="titleControl">
+          <br>
+          <div>
+            <span *ngFor="#item of itemsControlArray.controls">
+              <label>
+                Description:
+              </label>
+              <input type="text"
+                [ngFormControl]="item.controls.descriptionControl">
+              <label>
+                Quantity:
+              </label>
+              <input type="text"
+                [ngFormControl]="item.controls.quantityControl">
+              <br>
+            </span>
+            <button (click)="addNewItem()">
+              Add item
+            </button>
+          </div>
+        </div>
+        <div ngControlGroup="footerGroup">
+          <label>
+            Total:
+          </label>
+          <input type="number"
+            ngControl="totalControl">
+          <br>
+          <label>
+            Urgent:
+          </label>
+          <input type="checkbox"
+            ngControl="urgentControl">
+          <br>
+        </div>
+        <h3>My Form info</h3>
+        Valid: {{myForm.valid}} <br>
+        Header valid: {{myForm.controls.headerGroup.valid}} <br>
+        Body valid: {{myForm.controls.bodyGroup.valid}} <br>
+        Footer valid: {{myForm.controls.footerGroup.valid}} <br>
+        <pre>
+          {{stringify(myForm.value)}}
+        </pre>
+      </form>
+    </div>

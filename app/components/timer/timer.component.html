@@ -1,0 +1,24 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Timer
+    </div>
+    <div class="panel-body" >
+        <div class="row"  >
+            <div id="circle" class="circle-progress vcenter">
+                <strong></strong>
+            </div>
+            <div class="counter">
+                <div class="form-inline">
+                    <button (click)="decrement();" class="btn btn-primary">
+                    -
+                    </button>
+                    <input type="text" class="form-control" [value]="counterValue">
+                    <button (click)="increment();" class="btn btn-primary">
+                    +
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
