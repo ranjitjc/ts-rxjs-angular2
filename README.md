@@ -6,3 +6,7 @@ Sample application for typescript,rxjs and angular2
 
 ##Run the app    
     >npm start
+    
+    
+##Impement Socket.io
+npm i socket.io --save
